@@ -150,7 +150,6 @@ const tools: Tool[] = [
   { name: "Copysmith", logo: "https://www.copysmith.ai/favicon.ico", category: "Marketing", slogan: "AI 文案生成工具", desc: "為電商、廣告與行銷生成高轉化率的文案。", url: "https://www.copysmith.ai" },
 
   // Marketing AI 6.0 - 語言與內容 AI
-  { name: "Notion AI", logo: "https://www.notion.so/favicon.ico", category: "MarketingContent", slogan: "筆記軟體中的超級大腦", desc: "直接在筆記中摘要、續寫、改寫與翻譯，大幅提升文書作業效率。", url: "https://www.notion.so" },
   { name: "Rytr", logo: "https://rytr.me/favicon.ico", category: "MarketingContent", slogan: "AI 文案與內容生成", desc: "快速生成行銷文案、部落格文章與社群內容，支援多種語言與風格。", url: "https://rytr.me" },
   { name: "Hyperwrite", logo: "https://www.hyperwrite.com/favicon.ico", category: "MarketingContent", slogan: "AI 寫作與自動化工具", desc: "在任何網頁上使用 AI 自動完成文字、生成內容與提高生產力。", url: "https://www.hyperwrite.com" },
 
