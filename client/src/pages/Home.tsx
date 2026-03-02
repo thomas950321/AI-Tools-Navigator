@@ -330,7 +330,7 @@ export default function Home() {
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 max-h-32 overflow-y-auto pb-2 transition-all duration-300">
+          <div className="flex flex-wrap justify-center gap-2 max-h-32 overflow-y-auto pb-2 transition-all duration-300 [&::-webkit-scrollbar]:hidden" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
             {categories.map(cat => (
               <button
                 key={cat.id}
