@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import * as React from "react";
 import { Search, ExternalLink } from "lucide-react";
 
 interface Tool {
@@ -274,6 +275,19 @@ const categories = [
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    setIsHeaderVisible(currentScrollY < lastScrollY || currentScrollY < 100);
+    setLastScrollY(currentScrollY);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const filteredTools = useMemo(() => {
     return tools.filter(tool => {
@@ -291,7 +305,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-xl bg-background/80">
+      <header className={`sticky top-0 z-50 border-b border-border/50 backdrop-blur-xl bg-background/80 transition-all duration-300 ${isHeaderVisible ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="container py-6">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3 bg-gradient-to-b from-foreground to-muted bg-clip-text text-transparent">
@@ -317,7 +331,7 @@ export default function Home() {
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 max-h-32 overflow-y-auto pb-2">
+          <div className="flex flex-wrap justify-center gap-2 max-h-32 overflow-y-auto pb-2 transition-all duration-300">
             {categories.map(cat => (
               <button
                 key={cat.id}
