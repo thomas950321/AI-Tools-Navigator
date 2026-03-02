@@ -369,14 +369,19 @@ export default function Home() {
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <img 
-                    src={tool.logo} 
-                    alt={tool.name}
-                    className="w-12 h-12 rounded-lg object-contain bg-white/5 p-2"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
+                  <div className="relative w-12 h-12">
+                    <img 
+                      src={tool.logo} 
+                      alt={tool.name}
+                      className="w-12 h-12 rounded-lg object-contain bg-white/5 p-2 logo-image"
+                      onError={(e) => {
+                        e.currentTarget.classList.add('hidden');
+                        const placeholder = e.currentTarget.nextElementSibling as HTMLElement;
+                        if (placeholder) placeholder.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="absolute inset-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 flex items-center justify-center text-xs font-bold text-primary/60 hidden" />
+                  </div>
                   <span className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
                     {categories.find(c => c.id === tool.category)?.label}
                   </span>
