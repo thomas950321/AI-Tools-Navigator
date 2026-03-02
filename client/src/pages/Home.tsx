@@ -4,7 +4,7 @@ import { Search, ExternalLink } from "lucide-react";
 interface Tool {
   name: string;
   logo: string;
-  category: "Automation" | "Video" | "Slides" | "Audio" | "Productivity" | "Code" | "Research" | "3D" | "Customer" | "Testing" | "Labeling" | "Legal" | "Education" | "Translation" | "Marketing" | "General" | "Writing" | "MindMap" | "VideoEdit" | "Design" | "ContentCreation" | "ProjectManagement" | "Other";
+  category: "Automation" | "Video" | "Slides" | "Audio" | "Productivity" | "Code" | "Research" | "3D" | "Customer" | "Testing" | "Labeling" | "Legal" | "Education" | "Translation" | "Marketing" | "General" | "Writing" | "MindMap" | "VideoEdit" | "Design" | "ContentCreation" | "ProjectManagement" | "Other" | "MarketingContent" | "MarketingAnalytics" | "MarketingSearch" | "MarketingGraphics" | "MarketingShortVideo" | "MarketingVideoEdit" | "MarketingAvatar" | "MarketingWorkflow" | "MarketingAds"
   slogan: string;
   desc: string;
   url: string;
@@ -147,6 +147,72 @@ const tools: Tool[] = [
   { name: "Jasper", logo: "https://www.jasper.ai/favicon.ico", category: "Marketing", slogan: "AI 內容行銷助手", desc: "快速生成高品質行銷文案、部落格文章與社群內容。", url: "https://www.jasper.ai" },
   { name: "Surfer SEO", logo: "https://surferseo.com/favicon.ico", category: "Marketing", slogan: "AI 內容優化工具", desc: "分析排名靠前的內容，AI 自動優化您的文章以提升排名。", url: "https://surferseo.com" },
   { name: "Copysmith", logo: "https://www.copysmith.ai/favicon.ico", category: "Marketing", slogan: "AI 文案生成工具", desc: "為電商、廣告與行銷生成高轉化率的文案。", url: "https://www.copysmith.ai" },
+
+  // Marketing AI 6.0 - 語言與內容 AI
+  { name: "Notion AI", logo: "https://www.notion.so/favicon.ico", category: "MarketingContent", slogan: "筆記軟體中的超級大腦", desc: "直接在筆記中摘要、續寫、改寫與翻譯，大幅提升文書作業效率。", url: "https://www.notion.so" },
+  { name: "Rytr", logo: "https://rytr.me/favicon.ico", category: "MarketingContent", slogan: "AI 文案與內容生成", desc: "快速生成行銷文案、部落格文章與社群內容，支援多種語言與風格。", url: "https://rytr.me" },
+  { name: "Hyperwrite", logo: "https://www.hyperwrite.com/favicon.ico", category: "MarketingContent", slogan: "AI 寫作與自動化工具", desc: "在任何網頁上使用 AI 自動完成文字、生成內容與提高生產力。", url: "https://www.hyperwrite.com" },
+
+  // Marketing AI 6.0 - 分析與洞察 AI
+  { name: "Tableau Pulse", logo: "https://www.tableau.com/favicon.ico", category: "MarketingAnalytics", slogan: "商業智能 AI 分析", desc: "自動生成數據洞察與可視化報告，幫助行銷人員快速做決策。", url: "https://www.tableau.com" },
+  { name: "Power BI Copilot", logo: "https://powerbi.microsoft.com/favicon.ico", category: "MarketingAnalytics", slogan: "Microsoft 的 AI 數據分析", desc: "在 Power BI 中使用 AI 自動生成圖表、分析與洞察。", url: "https://powerbi.microsoft.com" },
+  { name: "MonkeyLearn", logo: "https://monkeylearn.com/favicon.ico", category: "MarketingAnalytics", slogan: "文本分析與分類 AI", desc: "自動分類與分析客戶反饋、社群評論與市場數據。", url: "https://monkeylearn.com" },
+  { name: "Polymer Search", logo: "https://www.polymersearch.com/favicon.ico", category: "MarketingAnalytics", slogan: "AI 驅動的數據搜尋", desc: "用自然語言查詢數據，無需複雜的 SQL 或程式碼。", url: "https://www.polymersearch.com" },
+  { name: "Looker AI", logo: "https://looker.com/favicon.ico", category: "MarketingAnalytics", slogan: "Google 的商業智能平台", desc: "整合 AI 的數據可視化與分析工具，適合企業決策。", url: "https://looker.com" },
+
+  // Marketing AI 6.0 - 搜尋與研究 AI
+  { name: "Connected Papers", logo: "https://www.connectedpapers.com/favicon.ico", category: "MarketingSearch", slogan: "學術論文關聯圖", desc: "視覺化展示論文之間的關聯，幫助快速找到相關研究。", url: "https://www.connectedpapers.com" },
+  { name: "Scite", logo: "https://scite.ai/favicon.ico", category: "MarketingSearch", slogan: "智能引文分析", desc: "分析論文被引用的方式，判斷研究的可信度與影響力。", url: "https://scite.ai" },
+  { name: "Semantic Scholar", logo: "https://www.semanticscholar.org/favicon.ico", category: "MarketingSearch", slogan: "AI 驅動的學術搜尋", desc: "使用 AI 理解論文內容，提供更精準的搜尋結果。", url: "https://www.semanticscholar.org" },
+
+  // Marketing AI 6.0 - 行銷圖文 AI
+  { name: "Nano Banana", logo: "https://www.nanobanana.ai/favicon.ico", category: "MarketingGraphics", slogan: "快速生成行銷圖像", desc: "用文字描述快速生成高品質行銷圖片與社群貼文。", url: "https://www.nanobanana.ai" },
+  { name: "Ideogram", logo: "https://ideogram.ai/favicon.ico", category: "MarketingGraphics", slogan: "文字精準的圖像生成", desc: "在生成的圖像中精準呈現文字內容，適合行銷與設計。", url: "https://ideogram.ai" },
+  { name: "OpenArt", logo: "https://openart.ai/favicon.ico", category: "MarketingGraphics", slogan: "AI 藝術與設計平台", desc: "集合多個 AI 模型，支援圖像生成、編輯與風格轉換。", url: "https://openart.ai" },
+  { name: "VistaCreate", logo: "https://www.vistacreate.com/favicon.ico", category: "MarketingGraphics", slogan: "社群媒體設計工具", desc: "快速製作 Instagram、TikTok 與其他社群平台的專業設計。", url: "https://www.vistacreate.com" },
+  { name: "Remove.bg", logo: "https://www.remove.bg/favicon.ico", category: "MarketingGraphics", slogan: "一鍵移除背景", desc: "自動移除圖片背景，適合產品照與人物照的快速處理。", url: "https://www.remove.bg" },
+
+  // Marketing AI 6.0 - 短影音生成 AI
+  { name: "Google Veo", logo: "https://deepmind.google/favicon.ico", category: "MarketingShortVideo", slogan: "Google 推出的影片生成", desc: "高品質影片生成工具，支援複雜場景與特效。", url: "https://deepmind.google" },
+  { name: "DeeVid.ai", logo: "https://deevidai.com/favicon.ico", category: "MarketingShortVideo", slogan: "快速短影片生成", desc: "用文字或圖片快速生成短影片，適合社群行銷。", url: "https://deevidai.com" },
+  { name: "MiniMax Video-01", logo: "https://www.minimaxi.com/favicon.ico", category: "MarketingShortVideo", slogan: "高效能影片生成", desc: "快速生成高品質短影片，支援多種風格與效果。", url: "https://www.minimaxi.com" },
+
+  // Marketing AI 6.0 - 影片剪輯與再製 AI
+  { name: "Premiere Pro (AI)", logo: "https://www.adobe.com/favicon.ico", category: "MarketingVideoEdit", slogan: "Adobe 的 AI 影片編輯", desc: "在 Premiere Pro 中使用 AI 自動剪輯、調色與特效。", url: "https://www.adobe.com" },
+  { name: "Opus Clip", logo: "https://www.opusclip.com/favicon.ico", category: "MarketingVideoEdit", slogan: "長影片轉短影片", desc: "自動將長影片分割成多個高品質短影片，適合社群行銷。", url: "https://www.opusclip.com" },
+  { name: "KaiPai (開拍)", logo: "https://kaipaiai.com/favicon.ico", category: "MarketingVideoEdit", slogan: "AI 影片製作平台", desc: "從腳本到成片，AI 幫助完成整個影片製作流程。", url: "https://kaipaiai.com" },
+  { name: "Edits", logo: "https://edits.ai/favicon.ico", category: "MarketingVideoEdit", slogan: "AI 影片編輯工具", desc: "自動生成字幕、調整節奏與添加效果。", url: "https://edits.ai" },
+  { name: "Wisecut", logo: "https://www.wisecut.video/favicon.ico", category: "MarketingVideoEdit", slogan: "自動影片剪輯", desc: "根據語音自動剪輯影片，移除靜默段落與不必要的部分。", url: "https://www.wisecut.video" },
+  { name: "Pictory", logo: "https://pictory.ai/favicon.ico", category: "MarketingVideoEdit", slogan: "文字轉影片與影片編輯", desc: "用文字或部落格文章快速生成影片，支援自動字幕。", url: "https://pictory.ai" },
+  { name: "Nova AI", logo: "https://www.novaai.com/favicon.ico", category: "MarketingVideoEdit", slogan: "AI 影片助手", desc: "自動生成字幕、翻譯與特效，提升影片製作效率。", url: "https://www.novaai.com" },
+
+  // Marketing AI 6.0 - 數字人/虛擬代言 AI
+  { name: "D-ID", logo: "https://www.d-id.com/favicon.ico", category: "MarketingAvatar", slogan: "AI 虛擬人物生成", desc: "用照片或影片生成會說話的虛擬人物，適合行銷與教育。", url: "https://www.d-id.com" },
+  { name: "Hour One", logo: "https://www.hourone.ai/favicon.ico", category: "MarketingAvatar", slogan: "企業級虛擬主播", desc: "快速製作專業虛擬主播影片，支援多語言與品牌定制。", url: "https://www.hourone.ai" },
+  { name: "Reals", logo: "https://reals.ai/favicon.ico", category: "MarketingAvatar", slogan: "AI 虛擬代言人", desc: "生成逼真的虛擬人物進行產品推廣與品牌代言。", url: "https://reals.ai" },
+  { name: "Elai.io", logo: "https://elai.io/favicon.ico", category: "MarketingAvatar", slogan: "AI 影片製作平台", desc: "用文字或簡報快速生成虛擬主播影片。", url: "https://elai.io" },
+  { name: "DeepBrain", logo: "https://www.deepbrain.io/favicon.ico", category: "MarketingAvatar", slogan: "AI 虛擬人物與影片", desc: "生成逼真的虛擬人物進行解說、教學與行銷推廣。", url: "https://www.deepbrain.io" },
+  { name: "Surreal", logo: "https://www.surreal.ai/favicon.ico", category: "MarketingAvatar", slogan: "AI 虛擬人物生成", desc: "快速生成高品質虛擬人物，支援多種風格與語言。", url: "https://www.surreal.ai" },
+  { name: "Humata", logo: "https://www.humata.ai/favicon.ico", category: "MarketingAvatar", slogan: "AI 文件分析與虛擬助手", desc: "分析文件並生成虛擬助手進行客服與行銷。", url: "https://www.humata.ai" },
+
+  // Marketing AI 6.0 - 代理型/工作流 AI
+  { name: "Operator", logo: "https://openai.com/favicon.ico", category: "MarketingWorkflow", slogan: "OpenAI 自動化代理", desc: "自動執行網頁操作、填寫表格與處理繁瑣任務。", url: "https://openai.com/operator" },
+  { name: "CrewAI", logo: "https://crewai.com/favicon.ico", category: "MarketingWorkflow", slogan: "多 Agent 協作框架", desc: "構建多個 AI Agent 進行協作，完成複雜的行銷任務。", url: "https://crewai.com" },
+  { name: "LangGraph", logo: "https://langchain.com/favicon.ico", category: "MarketingWorkflow", slogan: "AI 工作流構建工具", desc: "用圖形化方式構建複雜的 AI 工作流與自動化流程。", url: "https://langchain.com" },
+  { name: "AutoGen", logo: "https://microsoft.com/favicon.ico", category: "MarketingWorkflow", slogan: "Microsoft 的多 Agent 框架", desc: "構建自主 AI Agent 進行對話與協作完成任務。", url: "https://microsoft.com" },
+  { name: "AutoGPT", logo: "https://autogpt.com/favicon.ico", category: "MarketingWorkflow", slogan: "自主 AI 代理", desc: "自動執行任務與目標達成，無需人工干預。", url: "https://autogpt.com" },
+  { name: "11x.ai (Alice)", logo: "https://11x.ai/favicon.ico", category: "MarketingWorkflow", slogan: "AI 工作流自動化", desc: "用 AI 自動化重複性工作，提升行銷團隊效率。", url: "https://11x.ai" },
+
+  // Marketing AI 6.0 - 廣告與投放 AI
+  { name: "Meta Advantage+", logo: "https://facebook.com/favicon.ico", category: "MarketingAds", slogan: "Meta 的 AI 廣告優化", desc: "自動優化廣告投放與預算分配，提升 ROI。", url: "https://facebook.com" },
+  { name: "Google Performance Max", logo: "https://google.com/favicon.ico", category: "MarketingAds", slogan: "Google 的全渠道廣告", desc: "AI 自動優化跨 Google 全渠道的廣告投放。", url: "https://google.com" },
+  { name: "ViralArc", logo: "https://viralarc.com/favicon.ico", category: "MarketingAds", slogan: "社群內容病毒化工具", desc: "分析與優化社群內容，提高病毒傳播潛力。", url: "https://viralarc.com" },
+  { name: "TikTok Smart Performance", logo: "https://tiktok.com/favicon.ico", category: "MarketingAds", slogan: "TikTok 的 AI 廣告優化", desc: "自動優化 TikTok 廣告投放與創意組合。", url: "https://tiktok.com" },
+  { name: "AdCreative.ai", logo: "https://adcreative.ai/favicon.ico", category: "MarketingAds", slogan: "AI 廣告創意生成", desc: "自動生成高轉化率的廣告創意與文案。", url: "https://adcreative.ai" },
+  { name: "Magdicx", logo: "https://magdicx.com/favicon.ico", category: "MarketingAds", slogan: "廣告數據分析平台", desc: "分析與優化廣告效果，提供詳細的 ROI 報告。", url: "https://magdicx.com" },
+  { name: "Revealbot", logo: "https://revealbot.com/favicon.ico", category: "MarketingAds", slogan: "廣告自動化與優化", desc: "自動化廣告管理與優化，支援多個廣告平台。", url: "https://revealbot.com" },
+  { name: "Smartly.io", logo: "https://www.smartly.io/favicon.ico", category: "MarketingAds", slogan: "企業級廣告管理平台", desc: "集中管理與優化所有廣告渠道，提升行銷效率。", url: "https://www.smartly.io" },
+
   { name: "Intercom", logo: "https://www.intercom.com/favicon.ico", category: "Customer", slogan: "AI 客服與對話平台", desc: "整合客服、行銷與產品工具，提供 AI 驅動的客戶支持。", url: "https://www.intercom.com" },
   { name: "Zendesk AI", logo: "https://www.zendesk.com/favicon.ico", category: "Customer", slogan: "企業級客服 AI 解決方案", desc: "自動化客服工作流，提升回應速度與客戶滿意度。", url: "https://www.zendesk.com" },
   { name: "Ada", logo: "https://www.ada.support/favicon.ico", category: "Customer", slogan: "AI 客服機器人平台", desc: "無需代碼即可構建智能客服機器人，支援多語言與多渠道。", url: "https://www.ada.support" },
@@ -193,6 +259,15 @@ const categories = [
   { id: "Writing", label: "寫作工具" },
   { id: "ContentCreation", label: "內容創作" },
   { id: "ProjectManagement", label: "專案管理" },
+  { id: "MarketingContent", label: "行銷文案" },
+  { id: "MarketingAnalytics", label: "行銷分析" },
+  { id: "MarketingSearch", label: "行銷研究" },
+  { id: "MarketingGraphics", label: "行銷圖文" },
+  { id: "MarketingShortVideo", label: "短影音生成" },
+  { id: "MarketingVideoEdit", label: "影片剪輯" },
+  { id: "MarketingAvatar", label: "虛擬代言人" },
+  { id: "MarketingWorkflow", label: "行銷工作流" },
+  { id: "MarketingAds", label: "廣告投放" },
   { id: "Other", label: "其他工具" }
 ];
 
@@ -264,7 +339,7 @@ export default function Home() {
       <main className="container py-12">
         <div className="text-center mb-8">
           <p className="text-muted-foreground">
-            找到 <span className="text-primary font-semibold">{filteredTools.length}</span> 個工具
+            找到 <span className="text-primary font-semibold">{filteredTools.length}</span> 個工具 | 共 {tools.length} 個工具
           </p>
         </div>
 
