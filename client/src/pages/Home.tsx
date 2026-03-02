@@ -4,7 +4,7 @@ import { Search, ExternalLink } from "lucide-react";
 interface Tool {
   name: string;
   logo: string;
-  category: "Automation" | "Video" | "Slides" | "Audio" | "Productivity" | "Code" | "Research" | "3D" | "Customer" | "Testing" | "Labeling" | "Legal" | "Education" | "Translation" | "Marketing" | "General" | "Writing";
+  category: "Automation" | "Video" | "Slides" | "Audio" | "Productivity" | "Code" | "Research" | "3D" | "Customer" | "Testing" | "Labeling" | "Legal" | "Education" | "Translation" | "Marketing" | "General" | "Writing" | "MindMap" | "VideoEdit" | "Design" | "ContentCreation" | "ProjectManagement" | "Other";
   slogan: string;
   desc: string;
   url: string;
@@ -27,6 +27,13 @@ const tools: Tool[] = [
   { name: "Luma Dream Machine", logo: "https://lumalabs.ai/favicon.ico", category: "Video", slogan: "極速高品質影片生成", desc: "以驚人的生成速度著稱，且對動作一致性的掌握非常出色。", url: "https://lumalabs.ai/dream-machine" },
   { name: "HeyGen", logo: "https://www.heygen.com/favicon.ico", category: "Video", slogan: "AI 數位人影片專家", desc: "一鍵生成多國語言的數位人解說影片，適合企業內訓與行銷推廣。", url: "https://www.heygen.com" },
   { name: "Synthesia", logo: "https://www.synthesia.io/favicon.ico", category: "Video", slogan: "企業級虛擬代言人平台", desc: "提供專業的虛擬主播，讓您無需攝影機與演員即可製作高品質企業影片。", url: "https://www.synthesia.io" },
+  { name: "FlexClip", logo: "https://flexclip.com/favicon.ico", category: "Video", slogan: "快速生成高品質短影片", desc: "輸入文字或網址即可快速生成影片，免費版可輸出 10 分鐘片長。", url: "https://flexclip.com" },
+  { name: "Pika", logo: "https://pika.art/favicon.ico", category: "Video", slogan: "無腦上傳圖片變影片", desc: "上傳圖片即可自動生成動畫影片，無需複雜操作。", url: "https://pika.art" },
+  { name: "King AI", logo: "https://klingai.com/favicon.ico", category: "Video", slogan: "塗抹照片動起來", desc: "塗抹照片局部就可以動起來，還可以加上移動路徑。", url: "https://klingai.com" },
+  { name: "PixVerse", logo: "https://pixverse.ai/favicon.ico", category: "Video", slogan: "創意特效影片生成", desc: "製作擁抱、接吻、猛毒、打拳擊等特效影片，創意無限。", url: "https://pixverse.ai" },
+  { name: "海螺", logo: "https://www.heluai.com/favicon.ico", category: "Video", slogan: "照片文字快速生成短片", desc: "照片加文字快速生成意想不到的超展開短片。", url: "https://www.heluai.com" },
+  { name: "Vidu", logo: "https://www.vidu.ai/favicon.ico", category: "Video", slogan: "無違和視頻生成", desc: "上傳參考圖片搭配文字馬上生成無違和視頻。", url: "https://www.vidu.ai" },
+  { name: "Vidful", logo: "https://vidful.ai/favicon.ico", category: "Video", slogan: "Sora 平替超擬真短片", desc: "超擬真高質感短片，有文字、圖片就能生成。", url: "https://vidful.ai" },
 
   // Slides
   { name: "Gamma", logo: "https://gamma.app/favicon.ico", category: "Slides", slogan: "一鍵生成美觀的簡報與網頁", desc: "輸入一段話，自動完成排版、圖片與內容，簡報製作效率提升 10 倍。", url: "https://gamma.app" },
@@ -35,6 +42,9 @@ const tools: Tool[] = [
   { name: "SlidesAI", logo: "https://www.slidesai.io/favicon.ico", category: "Slides", slogan: "Google Slides 的 AI 插件", desc: "直接在您熟悉的 Google 簡報環境中，透過 AI 快速生成內容與結構。", url: "https://www.slidesai.io" },
   { name: "Tome", logo: "https://tome.app/favicon.ico", category: "Slides", slogan: "敘事型 AI 簡報工具", desc: "專注於說故事的排版風格，適合用於產品演示或創意提案。", url: "https://tome.app" },
   { name: "Pitch", logo: "https://pitch.com/favicon.ico", category: "Slides", slogan: "現代化團隊協作簡報", desc: "結合強大的 AI 輔助與流暢的團隊協作功能，打造下一代簡報體驗。", url: "https://pitch.com" },
+  { name: "Slidesgo", logo: "https://slidesgo.com/favicon.ico", category: "Slides", slogan: "高質感簡報與圖庫", desc: "不僅生成高質感簡報，還有大量圖庫、AI 轉圖片功能。", url: "https://slidesgo.com" },
+  { name: "Kimi", logo: "https://kimi.ai/favicon.ico", category: "Slides", slogan: "生成簡報大綱與 PPT", desc: "不只生成簡報大綱，連質感 PPT 都做好，可以免費下載檔案。", url: "https://kimi.ai" },
+  { name: "Brisk Teaching", logo: "https://www.briskteaching.com/favicon.ico", category: "Slides", slogan: "影片轉簡報工具", desc: "影片也能轉成 PPT，用瀏覽器擴充一鍵把 YouTube 做成簡報。", url: "https://www.briskteaching.com" },
 
   // Audio
   { name: "Suno", logo: "https://suno.com/favicon.ico", category: "Audio", slogan: "一鍵創作出完整專業歌曲", desc: "包含歌詞、旋律與人聲，效果足以媲美串流平台上的專業音樂作品。", url: "https://suno.com" },
@@ -43,6 +53,9 @@ const tools: Tool[] = [
   { name: "AIVA", logo: "https://www.aiva.ai/favicon.ico", category: "Audio", slogan: "專業級 AI 配樂創作", desc: "專注於樂器編曲，能根據場景需求生成不同情緒的背景音樂。", url: "https://www.aiva.ai" },
   { name: "Murf AI", logo: "https://murf.ai/favicon.ico", category: "Audio", slogan: "高品質 AI 旁白配音", desc: "提供豐富的配音員選擇，適合用於 Podcast、影片旁白與電子學習。", url: "https://murf.ai" },
   { name: "AudioPod", logo: "https://audiopod.ai/favicon.ico", category: "Audio", slogan: "全方位 AI 音樂工作室", desc: "集成了多種音訊生成與編輯功能，適合內容創作者的一站式工具。", url: "https://audiopod.ai" },
+  { name: "Fish Audio", logo: "https://fish.audio/favicon.ico", category: "Audio", slogan: "名人聲音文字轉語音", desc: "把您的文字讓名人聲音說出來，也能自己新增聲音。", url: "https://fish.audio" },
+  { name: "Hedra", logo: "https://www.hedra.com/favicon.ico", category: "Audio", slogan: "AI 數位人說話唱歌", desc: "上傳人物照片，輸入台詞或音檔，讓他開口說話唱歌。", url: "https://www.hedra.com" },
+  { name: "即夢", logo: "https://jimeng.io/favicon.ico", category: "Audio", slogan: "AI 對嘴同步工具", desc: "上傳音檔就可以幫圖片中的人物完美對嘴。", url: "https://jimeng.io" },
 
   // Productivity
   { name: "Perplexity", logo: "https://www.perplexity.ai/favicon.ico", category: "Productivity", slogan: "AI 驅動的對話式搜尋引擎", desc: "取代傳統 Google 搜尋，直接給出附帶來源參考的完整答案。", url: "https://www.perplexity.ai" },
@@ -66,6 +79,8 @@ const tools: Tool[] = [
   { name: "Elicit", logo: "https://elicit.com/favicon.ico", category: "Research", slogan: "AI 研究論文分析工具", desc: "快速分析大量研究論文，提取重要發現與數據，加速研究進度。", url: "https://elicit.com" },
   { name: "Genspark", logo: "https://www.genspark.ai/favicon.ico", category: "Research", slogan: "多維度 AI 搜尋與研究", desc: "提供多角度的搜尋結果與深度分析，是探索複雜話題的最佳工具。", url: "https://www.genspark.ai" },
   { name: "Julius.ai", logo: "https://julius.ai/favicon.ico", category: "Research", slogan: "數據分析與統計 AI 助手", desc: "上傳數據後自動進行統計分析、可視化與預測，適合數據科學家。", url: "https://julius.ai" },
+  { name: "Arc", logo: "https://arc.net/favicon.ico", category: "Research", slogan: "整合 AI 的瀏覽器", desc: "自動總結網頁資訊，省去自己爬資料的麻煩。", url: "https://arc.net" },
+  { name: "BiLin", logo: "https://bilin.ai/favicon.ico", category: "Research", slogan: "跨國網站搜尋與翻譯", desc: "跨國搜尋您指定的外國網站，網頁還自動翻譯成您的語言。", url: "https://bilin.ai" },
 
   // 3D
   { name: "Meshy", logo: "https://www.meshy.ai/favicon.ico", category: "3D", slogan: "最強的 AI 3D 模型生成", desc: "文字或圖像轉 3D 模型，生成遊戲級別的高品質資產。", url: "https://www.meshy.ai" },
@@ -74,66 +89,99 @@ const tools: Tool[] = [
   { name: "Adobe Firefly", logo: "https://firefly.adobe.com/favicon.ico", category: "3D", slogan: "Adobe 官方 AI 生成工具", desc: "在 Adobe Creative Cloud 中使用 AI 生成圖像、文字與 3D 效果。", url: "https://firefly.adobe.com" },
   { name: "Figma AI", logo: "https://figma.com/favicon.ico", category: "3D", slogan: "設計工具中的 AI 助手", desc: "在 Figma 中使用 AI 自動生成設計、排版與原型。", url: "https://figma.com" },
 
-  // Customer Service
-  { name: "Intercom", logo: "https://www.intercom.com/favicon.ico", category: "Customer", slogan: "AI 客服與對話平台", desc: "整合客服、行銷與產品工具，提供 AI 驅動的客戶支持。", url: "https://www.intercom.com" },
-  { name: "Zendesk AI", logo: "https://www.zendesk.com/favicon.ico", category: "Customer", slogan: "企業級客服 AI 解決方案", desc: "自動化客服工作流，提升回應速度與客戶滿意度。", url: "https://www.zendesk.com" },
-  { name: "Ada", logo: "https://www.ada.support/favicon.ico", category: "Customer", slogan: "AI 客服機器人平台", desc: "無需代碼即可構建智能客服機器人，支援多語言與多渠道。", url: "https://www.ada.support" },
-  { name: "Kustomer", logo: "https://www.kustomer.com/favicon.ico", category: "Customer", slogan: "全渠道 AI 客服 CRM", desc: "統一管理所有客戶互動，AI 自動分類與回應客服工單。", url: "https://www.kustomer.com" },
+  // MindMap
+  { name: "Mapify", logo: "https://mapify.ai/favicon.ico", category: "MindMap", slogan: "一句話生成心智圖", desc: "一句話、文章、網站、YouTube、圖片、音訊生成各種漂亮心智圖。", url: "https://mapify.ai" },
+  { name: "Taskade", logo: "https://taskade.com/favicon.ico", category: "MindMap", slogan: "任務需求轉執行清單", desc: "說您的任務需求馬上產出一目了然執行清單、思維導圖、流程圖。", url: "https://taskade.com" },
+  { name: "Napkin", logo: "https://www.napkin.ai/favicon.ico", category: "MindMap", slogan: "文字轉視覺化圖表", desc: "貼上文字內容自動轉成秒懂的視覺化圖表，也可輸入提示詞生成。", url: "https://www.napkin.ai" },
+  { name: "Piktochart", logo: "https://piktochart.com/favicon.ico", category: "MindMap", slogan: "多張圖表一次生成", desc: "能產出一整份多張圖表，還有多款設計模板可以套用。", url: "https://piktochart.com" },
+  { name: "Felo", logo: "https://felo.ai/favicon.ico", category: "MindMap", slogan: "聊天機器人轉心智圖", desc: "聊天機器人不只幫您找答案，還可以把回答轉成心智圖。", url: "https://felo.ai" },
+  { name: "EdrawMind", logo: "https://www.edrawsoft.com/favicon.ico", category: "MindMap", slogan: "多人協作心智圖", desc: "多人線上協作共編的心智圖，還可以一鍵轉成 PPT。", url: "https://www.edrawsoft.com" },
+  { name: "Infography", logo: "https://infography.ai/favicon.ico", category: "MindMap", slogan: "文章轉資訊圖表", desc: "把英文文章轉成簡化的中文資訊圖表，範本多款又好看。", url: "https://infography.ai" },
+  { name: "Whimsical", logo: "https://whimsical.com/favicon.ico", category: "MindMap", slogan: "多功能圖表工具", desc: "心智圖、流程圖、便利貼都能打字產出，而且可以多人協作。", url: "https://whimsical.com" },
+  { name: "Gitmind", logo: "https://gitmind.com/favicon.ico", category: "MindMap", slogan: "AI 對話生成心智圖", desc: "AI 對話生成心智圖，點一鍵演示就瞬間變成投影片簡報。", url: "https://gitmind.com" },
 
-  // Testing
-  { name: "Mabl", logo: "https://www.mabl.com/favicon.ico", category: "Testing", slogan: "AI 低代碼測試自動化", desc: "從屏幕錄製自動生成測試用例，無需編寫複雜代碼。", url: "https://www.mabl.com" },
-  { name: "Testim", logo: "https://www.testim.io/favicon.ico", category: "Testing", slogan: "自我修復的 AI 測試工具", desc: "AI 自動修復失敗的測試，減少維護成本與測試時間。", url: "https://www.testim.io" },
-  { name: "Applitools", logo: "https://applitools.com/favicon.ico", category: "Testing", slogan: "AI 視覺測試平台", desc: "自動檢測 UI 變化與視覺缺陷，確保跨瀏覽器兼容性。", url: "https://applitools.com" },
-  { name: "QA Wolf", logo: "https://www.qawolf.com/favicon.ico", category: "Testing", slogan: "自動化測試代碼生成", desc: "自動生成可維護的 E2E 測試代碼，加速 QA 流程。", url: "https://www.qawolf.com" },
+  // VideoEdit
+  { name: "Animated Drawings", logo: "https://www.animateddrawings.com/favicon.ico", category: "VideoEdit", slogan: "自己畫的角色動起來", desc: "把自己畫的角色圖片加上挑選動作就可以動起來。", url: "https://www.animateddrawings.com" },
+  { name: "Viggle", logo: "https://viggle.ai/favicon.ico", category: "VideoEdit", slogan: "人物跳舞影片生成", desc: "指定的動作影片，上傳人物全身照，馬上讓那個人跳舞。", url: "https://viggle.ai" },
+  { name: "Filmora", logo: "https://filmora.wondershare.com/favicon.ico", category: "VideoEdit", slogan: "長片轉短片與物件刪除", desc: "一鍵長片轉短片，還有塗抹刪除物件功能。", url: "https://filmora.wondershare.com" },
+  { name: "Domo AI", logo: "https://www.domo.ai/favicon.ico", category: "VideoEdit", slogan: "影片風格轉換", desc: "用一張照片就可以改變影片的風格，把現實變成動漫。", url: "https://www.domo.ai" },
+  { name: "Capcut", logo: "https://www.capcut.com/favicon.ico", category: "VideoEdit", slogan: "隱藏版帶貨 Reels 功能", desc: "隱藏版功能！貼上拍賣連結就幫您做好帶貨 Reels。", url: "https://www.capcut.com" },
 
-  // Data Labeling
-  { name: "Scale AI", logo: "https://scale.com/favicon.ico", category: "Labeling", slogan: "企業級數據標註平台", desc: "大規模數據標註與質量控制，支援 RLHF 與模型評估。", url: "https://scale.com" },
-  { name: "Labelbox", logo: "https://labelbox.com/favicon.ico", category: "Labeling", slogan: "機器學習數據標註工具", desc: "靈活的數據標註工作流，支援圖像、文字與視頻標註。", url: "https://labelbox.com" },
-  { name: "SuperAnnotate", logo: "https://www.superannotate.com/favicon.ico", category: "Labeling", slogan: "AI 輔助數據標註", desc: "AI 自動標註與質量檢查，大幅加速標註效率。", url: "https://www.superannotate.com" },
+  // Design
+  { name: "Leonardo", logo: "https://leonardo.ai/favicon.ico", category: "Design", slogan: "手殘畫轉高質感圖像", desc: "上傳手殘畫或輸入提示詞，可選擇套用多種風格模板。", url: "https://leonardo.ai" },
+  { name: "Dreamina", logo: "https://www.dreamina.com/favicon.ico", category: "Design", slogan: "圖片二創美圖", desc: "圖片 1+1 二創美圖，用圖片指定主角、風格快速生成。", url: "https://www.dreamina.com" },
+  { name: "Kittl", logo: "https://www.kittl.com/favicon.ico", category: "Design", slogan: "3 秒搞定 LOGO 設計", desc: "輸入文字 3 秒搞定 LOGO！還可以做 Mockup 模擬商品照。", url: "https://www.kittl.com" },
+  { name: "EasyPeasy", logo: "https://www.easypeasyai.com/favicon.ico", category: "Design", slogan: "AI 室內設計", desc: "上傳居家照片，選您喜歡的室內風格，幫您完成室內設計。", url: "https://www.easypeasyai.com" },
+  { name: "Prome", logo: "https://www.prome.ai/favicon.ico", category: "Design", slogan: "電商專業商品照", desc: "電商必備！給 AI 產品照，生成指定的質感專業商品照。", url: "https://www.prome.ai" },
+  { name: "Recraft", logo: "https://www.recraft.ai/favicon.ico", category: "Design", slogan: "生成商用 Icon 集合", desc: "給 AI 一張參考圖就能生成一組超 Q 的 Icon，可商用。", url: "https://www.recraft.ai" },
+  { name: "Magic Studio", logo: "https://www.magicstudio.com/favicon.ico", category: "Design", slogan: "全能修圖工具", desc: "移除物件/背景、無損放大、生圖片、轉檔、大頭照通通有。", url: "https://www.magicstudio.com" },
+  { name: "Restore Photos", logo: "https://www.restorephoto.ai/favicon.ico", category: "Design", slogan: "模糊舊照變高清", desc: "免註冊，各種模糊照、失焦照、低解析舊照馬上變高清。", url: "https://www.restorephoto.ai" },
+  { name: "ColorMagic", logo: "https://www.colormagic.ai/favicon.ico", category: "Design", slogan: "AI 配色工具", desc: "用這個 AI 配色不會出錯，輸入關鍵字給您色票調色盤。", url: "https://www.colormagic.ai" },
 
-  // Legal
-  { name: "Spellbook", logo: "https://www.spellbook.legal/favicon.ico", category: "Legal", slogan: "AI 法律文件起草工具", desc: "在 Word 中使用 AI 起草與審查法律文件，確保準確性。", url: "https://www.spellbook.legal" },
-  { name: "Lexis+ AI", logo: "https://www.lexisnexis.com/favicon.ico", category: "Legal", slogan: "法律研究與起草 AI", desc: "基於 LexisNexis 法律數據庫的 AI 研究與起草工具。", url: "https://www.lexisnexis.com" },
-  { name: "LEGALFLY", logo: "https://www.legalfly.com/favicon.ico", category: "Legal", slogan: "法律文件編輯 AI 助手", desc: "在 Word 中自動編輯與優化法律文件，支援多國法律。", url: "https://www.legalfly.com" },
+  // ContentCreation
+  { name: "Genape", logo: "https://genape.ai/favicon.ico", category: "ContentCreation", slogan: "小編神器生成社群貼文", desc: "小編神器！貼上文章連結生成 IG 社群貼文，連圖片都有。", url: "https://genape.ai" },
 
-  // Education
-  { name: "Khan Academy Khanmigo", logo: "https://www.khanacademy.org/favicon.ico", category: "Education", slogan: "AI 私人家教", desc: "AI 驅動的個性化學習助手，支援多科目與多語言。", url: "https://www.khanacademy.org" },
-  { name: "Duolingo Max", logo: "https://www.duolingo.com/favicon.ico", category: "Education", slogan: "語言學習 AI 助手", desc: "使用 GPT 提供個性化語言學習與實時糾正。", url: "https://www.duolingo.com" },
-  { name: "Outschool AI", logo: "https://outschool.com/favicon.ico", category: "Education", slogan: "線上教育 AI 平台", desc: "連接學生與教師的平台，整合 AI 個性化學習功能。", url: "https://outschool.com" },
+  // ProjectManagement
+  { name: "Magic To Do", logo: "https://www.magictodo.ai/favicon.ico", category: "ProjectManagement", slogan: "目標轉任務清單", desc: "秒變 J 人！輸入目標就列出任務項目，更細項的規劃清單。", url: "https://www.magictodo.ai" },
+  { name: "Reclaim", logo: "https://reclaim.ai/favicon.ico", category: "ProjectManagement", slogan: "智能行事曆規劃", desc: "給它任務跟截止日，幫您規劃好還安排到您有空的行事曆裡。", url: "https://reclaim.ai" },
 
-  // Translation
-  { name: "DeepL", logo: "https://www.deepl.com/favicon.ico", category: "Translation", slogan: "最高品質的 AI 翻譯", desc: "在歐洲語言翻譯上表現最佳，保留原文風格與含義。", url: "https://www.deepl.com" },
-  { name: "Google Translate", logo: "https://translate.google.com/favicon.ico", category: "Translation", slogan: "全球最廣泛的翻譯工具", desc: "支援 100+ 語言，適合快速翻譯與多語言內容。", url: "https://translate.google.com" },
+  // Other
+  { name: "Layla", logo: "https://layla.ai/favicon.ico", category: "Other", slogan: "AI 旅遊行程規劃", desc: "跟 AI 說您的旅遊需求，馬上幫您規劃旅遊行程與住宿。", url: "https://layla.ai" },
+  { name: "Lawsnote", logo: "https://lawsnote.com/favicon.ico", category: "Other", slogan: "法律機器人查法規", desc: "告訴法律機器人您遇到的問題，幫您查法規和裁判。", url: "https://lawsnote.com" },
+  { name: "Interview Warmup", logo: "https://interviewwarmup.com/favicon.ico", category: "Other", slogan: "英文面試練習", desc: "練習英文面試神器，AI 模擬面試官問問題陪您面試。", url: "https://interviewwarmup.com" },
 
-  // Marketing
-  { name: "Semrush", logo: "https://semrush.com/favicon.ico", category: "Marketing", slogan: "企業級 AI SEO 平台", desc: "完整的 SEO、內容行銷與競爭分析工具，內建 AI 優化建議。", url: "https://semrush.com" },
-  { name: "Jasper", logo: "https://www.jasper.ai/favicon.ico", category: "Marketing", slogan: "AI 內容行銷助手", desc: "快速生成高品質行銷文案、部落格文章與社群內容。", url: "https://www.jasper.ai" },
-  { name: "Surfer SEO", logo: "https://surferseo.com/favicon.ico", category: "Marketing", slogan: "AI 內容優化工具", desc: "分析排名靠前的內容，AI 自動優化您的文章以提升排名。", url: "https://surferseo.com" },
-  { name: "Copysmith", logo: "https://www.copysmith.ai/favicon.ico", category: "Marketing", slogan: "AI 文案生成工具", desc: "為電商、廣告與行銷生成高轉化率的文案。", url: "https://www.copysmith.ai" },
-
-  // General Purpose
+  // Existing tools from previous list
   { name: "Manus", logo: "https://manus.im/favicon.ico", category: "General", slogan: "通用目的 AI 代理", desc: "能執行任何任務的通用 AI 代理，從研究到開發再到自動化。", url: "https://manus.im" },
   { name: "Gemini", logo: "https://gemini.google.com/favicon.ico", category: "General", slogan: "Google 最強 AI 助手", desc: "多模態 AI 助手，擅長圖像、視頻與文字理解。", url: "https://gemini.google.com" },
   { name: "Grok", logo: "https://grok.x.ai/favicon.ico", category: "General", slogan: "X 官方 AI 助手", desc: "實時信息訪問的 AI 助手，適合快速查詢與分析。", url: "https://grok.x.ai" },
   { name: "Skywork", logo: "https://www.skywork.ai/favicon.ico", category: "General", slogan: "新興的中文 AI 模型", desc: "專為中文優化的高性能 AI 模型，適合中文內容生成。", url: "https://www.skywork.ai" },
-
-  // Writing
   { name: "MiniMax", logo: "https://www.minimaxi.com/favicon.ico", category: "Writing", slogan: "高效能中文 AI 模型", desc: "快速且準確的中文文本生成，適合內容創作與翻譯。", url: "https://www.minimaxi.com" },
   { name: "AlStudio", logo: "https://www.alstudio.ai/favicon.ico", category: "Writing", slogan: "AI 創意寫作工具", desc: "協助創意寫作、故事構思與文學創作的 AI 平台。", url: "https://www.alstudio.ai" },
   { name: "Grammarly", logo: "https://www.grammarly.com/favicon.ico", category: "Writing", slogan: "AI 文法與寫作助手", desc: "實時檢查文法、拼寫與風格，提升寫作品質。", url: "https://www.grammarly.com" },
-  { name: "Copyscape", logo: "https://www.copyscape.com/favicon.ico", category: "Writing", slogan: "AI 內容檢測工具", desc: "檢測內容重複與抄襲，確保內容原創性。", url: "https://www.copyscape.com" }
+  { name: "Copyscape", logo: "https://www.copyscape.com/favicon.ico", category: "Writing", slogan: "AI 內容檢測工具", desc: "檢測內容重複與抄襲，確保內容原創性。", url: "https://www.copyscape.com" },
+  { name: "DeepL", logo: "https://www.deepl.com/favicon.ico", category: "Translation", slogan: "最高品質的 AI 翻譯", desc: "在歐洲語言翻譯上表現最佳，保留原文風格與含義。", url: "https://www.deepl.com" },
+  { name: "Google Translate", logo: "https://translate.google.com/favicon.ico", category: "Translation", slogan: "全球最廣泛的翻譯工具", desc: "支援 100+ 語言，適合快速翻譯與多語言內容。", url: "https://translate.google.com" },
+  { name: "Transladocs", logo: "https://transladocs.com/favicon.ico", category: "Translation", slogan: "整份簡報快速翻譯", desc: "一口氣翻譯整份簡報，支援 PDF、DOC 等檔案。", url: "https://transladocs.com" },
+  { name: "沈浸式翻譯", logo: "https://immersive-translate.com/favicon.ico", category: "Translation", slogan: "無痛瀏覽國外網站", desc: "在 Chrome 裝擴充就可以無痛逛國外網站。", url: "https://immersive-translate.com" },
+  { name: "Semrush", logo: "https://semrush.com/favicon.ico", category: "Marketing", slogan: "企業級 AI SEO 平台", desc: "完整的 SEO、內容行銷與競爭分析工具，內建 AI 優化建議。", url: "https://semrush.com" },
+  { name: "Jasper", logo: "https://www.jasper.ai/favicon.ico", category: "Marketing", slogan: "AI 內容行銷助手", desc: "快速生成高品質行銷文案、部落格文章與社群內容。", url: "https://www.jasper.ai" },
+  { name: "Surfer SEO", logo: "https://surferseo.com/favicon.ico", category: "Marketing", slogan: "AI 內容優化工具", desc: "分析排名靠前的內容，AI 自動優化您的文章以提升排名。", url: "https://surferseo.com" },
+  { name: "Copysmith", logo: "https://www.copysmith.ai/favicon.ico", category: "Marketing", slogan: "AI 文案生成工具", desc: "為電商、廣告與行銷生成高轉化率的文案。", url: "https://www.copysmith.ai" },
+  { name: "Intercom", logo: "https://www.intercom.com/favicon.ico", category: "Customer", slogan: "AI 客服與對話平台", desc: "整合客服、行銷與產品工具，提供 AI 驅動的客戶支持。", url: "https://www.intercom.com" },
+  { name: "Zendesk AI", logo: "https://www.zendesk.com/favicon.ico", category: "Customer", slogan: "企業級客服 AI 解決方案", desc: "自動化客服工作流，提升回應速度與客戶滿意度。", url: "https://www.zendesk.com" },
+  { name: "Ada", logo: "https://www.ada.support/favicon.ico", category: "Customer", slogan: "AI 客服機器人平台", desc: "無需代碼即可構建智能客服機器人，支援多語言與多渠道。", url: "https://www.ada.support" },
+  { name: "Kustomer", logo: "https://www.kustomer.com/favicon.ico", category: "Customer", slogan: "全渠道 AI 客服 CRM", desc: "統一管理所有客戶互動，AI 自動分類與回應客服工單。", url: "https://www.kustomer.com" },
+  { name: "Mabl", logo: "https://www.mabl.com/favicon.ico", category: "Testing", slogan: "AI 低代碼測試自動化", desc: "從屏幕錄製自動生成測試用例，無需編寫複雜代碼。", url: "https://www.mabl.com" },
+  { name: "Testim", logo: "https://www.testim.io/favicon.ico", category: "Testing", slogan: "自我修復的 AI 測試工具", desc: "AI 自動修復失敗的測試，減少維護成本與測試時間。", url: "https://www.testim.io" },
+  { name: "Applitools", logo: "https://applitools.com/favicon.ico", category: "Testing", slogan: "AI 視覺測試平台", desc: "自動檢測 UI 變化與視覺缺陷，確保跨瀏覽器兼容性。", url: "https://applitools.com" },
+  { name: "QA Wolf", logo: "https://www.qawolf.com/favicon.ico", category: "Testing", slogan: "自動化測試代碼生成", desc: "自動生成可維護的 E2E 測試代碼，加速 QA 流程。", url: "https://www.qawolf.com" },
+  { name: "Scale AI", logo: "https://scale.com/favicon.ico", category: "Labeling", slogan: "企業級數據標註平台", desc: "大規模數據標註與質量控制，支援 RLHF 與模型評估。", url: "https://scale.com" },
+  { name: "Labelbox", logo: "https://labelbox.com/favicon.ico", category: "Labeling", slogan: "機器學習數據標註工具", desc: "靈活的數據標註工作流，支援圖像、文字與視頻標註。", url: "https://labelbox.com" },
+  { name: "SuperAnnotate", logo: "https://www.superannotate.com/favicon.ico", category: "Labeling", slogan: "AI 輔助數據標註", desc: "AI 自動標註與質量檢查，大幅加速標註效率。", url: "https://www.superannotate.com" },
+  { name: "Spellbook", logo: "https://www.spellbook.legal/favicon.ico", category: "Legal", slogan: "AI 法律文件起草工具", desc: "在 Word 中使用 AI 起草與審查法律文件，確保準確性。", url: "https://www.spellbook.legal" },
+  { name: "Lexis+ AI", logo: "https://www.lexisnexis.com/favicon.ico", category: "Legal", slogan: "法律研究與起草 AI", desc: "基於 LexisNexis 法律數據庫的 AI 研究與起草工具。", url: "https://www.lexisnexis.com" },
+  { name: "LEGALFLY", logo: "https://www.legalfly.com/favicon.ico", category: "Legal", slogan: "法律文件編輯 AI 助手", desc: "在 Word 中自動編輯與優化法律文件，支援多國法律。", url: "https://www.legalfly.com" },
+  { name: "Khan Academy Khanmigo", logo: "https://www.khanacademy.org/favicon.ico", category: "Education", slogan: "AI 私人家教", desc: "AI 驅動的個性化學習助手，支援多科目與多語言。", url: "https://www.khanacademy.org" },
+  { name: "Duolingo Max", logo: "https://www.duolingo.com/favicon.ico", category: "Education", slogan: "語言學習 AI 助手", desc: "使用 GPT 提供個性化語言學習與實時糾正。", url: "https://www.duolingo.com" },
+  { name: "Outschool AI", logo: "https://outschool.com/favicon.ico", category: "Education", slogan: "線上教育 AI 平台", desc: "連接學生與教師的平台，整合 AI 個性化學習功能。", url: "https://outschool.com" },
+  { name: "Visily", logo: "https://www.visily.ai/favicon.ico", category: "Code", slogan: "手繪框架圖轉網頁", desc: "上傳手繪的框架圖 5 秒幫您設計網頁，還能套別家網站配色。", url: "https://www.visily.ai" },
+  { name: "Websim", logo: "https://websim.ai/favicon.ico", category: "Code", slogan: "需求轉網站生成", desc: "任何需求：遊戲、行程規劃、音樂製作，都能生出網站。", url: "https://websim.ai" },
+  { name: "Wegic", logo: "https://www.wegic.ai/favicon.ico", category: "Code", slogan: "一句話生成網頁", desc: "一句話生成手機版＋電腦版網頁，而且可以發佈上線！", url: "https://www.wegic.ai" },
 ];
 
 const categories = [
   { id: "All", label: "全部" },
   { id: "Automation", label: "自動化 & Agent" },
   { id: "Video", label: "影片生成" },
+  { id: "VideoEdit", label: "影片後製" },
   { id: "Slides", label: "簡報製作" },
   { id: "Audio", label: "音樂音效" },
   { id: "Productivity", label: "生產力 & 圖像" },
   { id: "Code", label: "代碼生成" },
   { id: "Research", label: "研究與分析" },
   { id: "3D", label: "3D & 設計" },
+  { id: "MindMap", label: "心智圖表" },
+  { id: "Design", label: "修圖設計" },
   { id: "Customer", label: "客服機器人" },
   { id: "Testing", label: "測試與 QA" },
   { id: "Labeling", label: "數據標註" },
@@ -142,7 +190,10 @@ const categories = [
   { id: "Translation", label: "翻譯工具" },
   { id: "Marketing", label: "行銷 & SEO" },
   { id: "General", label: "通用 AI 助手" },
-  { id: "Writing", label: "寫作工具" }
+  { id: "Writing", label: "寫作工具" },
+  { id: "ContentCreation", label: "內容創作" },
+  { id: "ProjectManagement", label: "專案管理" },
+  { id: "Other", label: "其他工具" }
 ];
 
 export default function Home() {
@@ -172,7 +223,7 @@ export default function Home() {
               AI Tools Navigator
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              2025-2026 年最熱門、真正好用的 AI 工具精選導航 | 78+ 工具 | 17+ 分類
+              2025-2026 年最熱門、真正好用的 AI 工具精選導航 | 120+ 工具 | 24+ 分類
             </p>
           </div>
 
@@ -270,7 +321,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-border/50 mt-20 py-8 text-center text-muted-foreground text-sm">
-        <p>AI Tools Navigator © 2026 | 精心篩選最熱門的 AI 工具 | 78+ 工具 | 17+ 分類</p>
+        <p>AI Tools Navigator © 2026 | 精心篩選最熱門的 AI 工具 | 120+ 工具 | 24+ 分類</p>
       </footer>
     </div>
   );
